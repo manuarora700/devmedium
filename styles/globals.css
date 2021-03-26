@@ -271,3 +271,12 @@ input[type="file"] {
 .hidden {
   display: none;
 }
+
+.text-center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.text-center button {
+  margin: 0 auto;
+}

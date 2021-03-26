@@ -156,6 +156,7 @@ button.btn-green {
 button.btn-google {
   background-color: white;
   color: var(--color-text);
+  margin: 0 auto;
 }
 
 .btn-google img {

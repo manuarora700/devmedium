@@ -7,9 +7,10 @@ import PostFeed from "../components/PostFeed";
 import { firestore, fromMillis, postToJSON } from "../lib/firebase";
 
 import { useState } from "react";
+import Metatags from "@components/Metatags";
 
 // Max post to query per page
-const LIMIT = 1;
+const LIMIT = 5;
 
 export async function getServerSideProps(context) {
   const postsQuery = firestore
@@ -61,6 +62,26 @@ export default function Home(props) {
 
   return (
     <main>
+      <Metatags
+        title="Home Page"
+        description="Get the latest posts on our site"
+      />
+
+      <div className="card card-info">
+        <h2>💡 Next.js + Firebase - Blogging</h2>
+        <p>
+          Welcome! This app is built with Next.js and Firebase and is loosely
+          inspired by Dev.to & Medium.
+        </p>
+        <p>
+          Sign up for an 👨‍🎤 account, ✍️ write posts, then 💞 heart content
+          created by other users. All public content is server-rendered and
+          search-engine optimized.
+        </p>
+        <p>
+          Thanks to Fireship.io for this amazing course on Next.js and Firebase.
+        </p>
+      </div>
       <PostFeed posts={posts} />
 
       {!loading && !postsEnd && (

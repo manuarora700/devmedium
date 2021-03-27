@@ -13,6 +13,46 @@ The features of [DevMedium](https://devmedium.vercel.app) are:
 - Like other posts you love, Unlike if not ❤️
 - Write posts in Markdown with Live Preview, Render in HTML 🌿
 
+## Installation and Usage
+
+```bash
+git clone https://github.com/manuarora700/devmedium.git
+cd devmedium
+npm install
+npm run dev
+```
+
+OR
+
+```bash
+git clone https://github.com/manuarora700/devmedium.git
+cd devmedium
+yarn
+yarn dev
+```
+
+In the `lib/firebase.js` file, you'll require your own API keys from Firebase. To generate your own keys:
+
+- Setup a firebase project on [Firebase](https://firebase.google.com)
+- Once done, Goto `Project Settings`
+- At the bottom, you'll find an option of `Deploy on web`
+- Click on it, It'll generate a bunch of script tags for you
+- Copy the firebaseConfig from the data provided, it'll look something like this:
+
+```js
+const firebaseConfig = {
+  apiKey: "AIzaSyByt62FYwaMJoaZORJrA8z39k3cD8G8xwA",
+  authDomain: "devmedium-8492f.firebaseapp.com",
+  projectId: "devmedium-8492f",
+  storageBucket: "devmedium-8492f.appspot.com",
+  messagingSenderId: "656756526690",
+  appId: "1:656756526690:web:0eef740346c7fbfa748b3b",
+  measurementId: "G-KL5B7DTZ4Z",
+};
+```
+
+- Copy paste your own firebase config file into lib/firebase.js and you'll be good to go.
+
 ## Application Breakdown
 
 The application is divided into various categories, where each category serves its own purpose.
@@ -97,5 +137,5 @@ Apart from that, all the other components which do not even require any data, ca
 
 That was a basic overview of the entire application. 🔥
 
-[Live Demo](https://devmedium.vercel.app);
-[Source Code](https://github.com/manuarora700/devmedium);
+[Live Demo](https://devmedium.vercel.app)
+[Source Code](https://github.com/manuarora700/devmedium)
